@@ -1,0 +1,138 @@
+.call-to-action {
+    height: 30rem;
+    position: relative;
+    display: block;
+    box-shadow: 0 0 20px $gray;
+
+    .section_content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+
+        .descr {
+            width: 40rem;
+            font-weight: bold;
+            color: $main;
+            text-align: right;
+            margin-right: 2rem;
+        }
+
+        form {
+            margin-left: 3rem;
+            width: 25%;
+
+            & > * {
+                z-index: 2;
+            }
+
+            input {
+                margin-top: 3rem;
+                background-color: transparent;
+                padding: 2rem 1rem;
+                border-top: 3px solid transparent;
+                border-left: 3px solid transparent;
+                border-right: 3px solid transparent;
+            }
+
+            button {
+                display: block;
+                background-color: rgba($main, 0.2);
+                z-index: 1;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 58rem;
+                height: 25rem;
+                cursor: pointer;
+                overflow: hidden;
+
+                p {
+                    font-size: 16rem;
+                    -webkit-text-stroke: 3px $white;
+                    opacity: 0.5;
+                    filter: invert(100%);
+                    color: transparent;
+                    margin: -7rem 0;
+                    text-align: right;
+                    transition: $transition;
+
+                    svg {
+                        color: rgba($main, 0.3);
+                        font-size: 40rem;
+                        transition: $transition;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        position: absolute;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 25rem;
+                    background-color: $main;
+                    z-index: -1;
+                    transition: $transition ease-in-out;
+                }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 58rem;
+                    height: 25rem;
+                    background-color: $main;
+                    z-index: -1;
+                    opacity: 0.2;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    & ~ input {
+                        background-color: rgba($white, 1);
+                        border: 3px solid $main;
+                    }
+
+                    p {
+                        filter: invert(0);
+                        opacity: 1;
+                    }
+
+                    svg {
+                        left: 2rem;
+                        color: $white;
+                    }
+
+                    &:after {
+                        width: 58rem;
+                    }
+                }
+            }
+        }
+
+        .price {
+            h1 {
+                font-size: 23rem;
+                font-family: $font-soft;
+                -webkit-text-stroke: 4px $main;
+                color: transparent;
+
+                span {
+                    margin-left: -3rem;
+                    font-family: $font;
+                    font-size: 10rem;
+                    color: $main;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.siteNavigation {
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  transition: $transition;
+  z-index: 10;
+  height: 8rem;
+  top: 0;
+
+  &.faded {
+    top: -8rem;
+  }
+
+  &.backgrounded {
+    background-color: $white;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    height: 10rem;
+    top: .6rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+
+    .selector {
+      display: block;
+      width: 0;
+      background-color: $main;
+      height: 4px;
+      position: absolute;
+      bottom: 1.5rem;
+      left: -2rem;
+      transition: $transition ease-in-out;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    li {
+      margin: 0 1rem;
+      font-size: 1.8rem;
+      position: relative;
+
+      a {
+        color: rgba($black, .7);
+        transition: $transition;
+
+        &:hover {
+          color: $main;
+        }
+      }
+
+      &.styled {
+        background-color: transparent;
+        padding: .9rem 1rem .9rem 1rem;
+        border-radius: $border;
+        position: relative;
+        transition: $transition;
+        box-shadow: 0 3px 5px transparent;
+        border: 2px solid $main;
+        cursor: pointer;
+        font-size: 1.6rem;
+
+        a {
+          color: $main;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $main;
+          border-radius: $border;
+          filter: blur(2px);
+          opacity: 0;
+          z-index: -1;
+        }
+
+        &:hover {
+          box-shadow: 0 3px 5px rgba($black, .5);
+          background-color: $main;
+          transform: scale(1.05);
+
+          a {
+            color: $white;
+
+            &::after {
+              display: none;
+            }
+          }
+
+          &:after {
+
+            animation: button .6s;
+          }
+        }
+      }
+    }
+  }
+}

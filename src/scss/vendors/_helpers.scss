@@ -1,0 +1,29 @@
+span.react {
+    font-family: $font-react;
+    color: $color-react;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+// Section width
+.s-w {
+    max-width: $section-width;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+// Grid
+.g1o3 {
+    flex-basis: 33.33%;
+}
+
+.m-a {
+    margin: auto;
+}

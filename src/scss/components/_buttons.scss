@@ -1,0 +1,41 @@
+.btn {
+    display: block;
+    text-align: center;
+    transition: $transition;
+
+    &-primary {
+        background-color: transparent;
+        padding: 0.9rem 1rem 0.9rem 1rem;
+        border-radius: $border;
+        position: relative;
+        box-shadow: 0 3px 5px transparent;
+        border: 2px solid $main;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: $main;
+        margin-top: 2rem;
+
+        &:hover {
+            box-shadow: 0 3px 5px rgba($black, 0.5);
+            background-color: $main;
+            transform: scale(1.05);
+            color: $white;
+        }
+    }
+
+    &-lg {
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+        margin-left: 0.3rem;
+        transition: margin-left 0.3s;
+    }
+
+    &:hover {
+        .icon {
+            margin-left: 9px;
+        }
+    }
+}

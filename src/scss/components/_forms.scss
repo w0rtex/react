@@ -1,0 +1,22 @@
+input.form-group {
+    padding: 2rem 0;
+    color: $black;
+    font-size: 1.8rem;
+    margin: 0 2rem;
+    position: relative;
+    display: block;
+    border-bottom: 3px solid $gray;
+    transition: $transition;
+
+    &:focus {
+        border-color: $main;
+    }
+}
+
+label.form-group {
+    font-size: 3.8rem;
+    text-align: left;
+    font-weight: 600;
+    position: relative;
+    left: 2rem;
+}

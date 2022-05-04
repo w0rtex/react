@@ -1,0 +1,11 @@
+.section__title {
+    h2 {
+        font-family: $font-serif;
+        margin-left: -3rem;
+    }
+
+    p {
+        color: rgba($black, 0.7);
+        font-weight: 300;
+    }
+}
