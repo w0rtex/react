@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     return (
         <>
             <Helmet>
-                <title>&lt;Compote /&gt; React Component Creator</title>
+                <title>React/Typescript template</title>
             </Helmet>
             <ParallaxProvider>
             {/* Pages here */}
